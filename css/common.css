@@ -4,6 +4,8 @@
     --brand-color-green: #2F3E2F;
     --brand-color-cream: #F4E7D3;
 
+    --active-nav: #532525;
+
     background-color: var(--brand-color-cream);
     color: var(--brand-color-brown);
 }
@@ -18,51 +20,40 @@ main {
     flex-direction: column;
     padding: 1.5rem;
     padding-bottom: 5rem;
-    margin-left: 10rem;
-
 }
 nav {
     display: flex;
-    position: fixed;
-    top: 0;
     flex-direction: column;
     overflow: auto;
-    height: 100%;
     background-color: var(--brand-color-brown);
 }
 nav a {
-    float: left;
     color: var(--brand-color-cream);
     padding: 1rem;
 }
 nav a:hover {
-    background-color: var(--brand-color-green);
+    background-color: var(--active-nav);
 }
-
 nav .active {
-    background-color: var(--brand-color-green);
+    background-color: var(--active-nav);
 }
-@media (max-width: 900px) {
+@media screen and (min-width: 400px) {
     nav {
         flex-direction: row;
-        width: 100%;
-        height: auto;
-        position: relative;
     }
-
-    nav a {
-        float: none;
-    }
-
+}
+@media screen and (min-width: 900px) {
     main {
-        margin: 0;
+        margin-left: 10rem;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        height: 100%;
     }
 }
-
-@media (max-width: 400px) {
-    
-}
-
 footer {
     position: fixed;
     left: 0;

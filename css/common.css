@@ -17,7 +17,9 @@ main {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    padding-bottom: 5rem;
     margin-left: 10rem;
+
 }
 nav {
     display: flex;
@@ -40,8 +42,7 @@ nav a:hover {
 nav .active {
     background-color: var(--brand-color-green);
 }
-
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
     nav {
         flex-direction: row;
         width: 100%;
@@ -52,9 +53,13 @@ nav .active {
     nav a {
         float: none;
     }
+
+    main {
+        margin: 0;
+    }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
     
 }
 
